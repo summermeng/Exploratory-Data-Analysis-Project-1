@@ -5,4 +5,5 @@ mydata <- hpc[66638:69517, ]
 dim(mydata)
 Global_active_power <- as.numeric(mydata$V3)
 time <- c(1:2880)
-plot(V2,Global_active_power, ylab="Global Active Power(kilowatt)")
+plot2 <- plot(V2,Global_active_power, ylab="Global Active Power(kilowatt)")
+dev.print(png, file = "plot2.png", width = 480, height = 480)
